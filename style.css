@@ -34,16 +34,19 @@ img {
     display: block;
 }
 
-.nav-list a:hover {
-    color:var(--color-blue);
-}
 .conteiner {
     width: 1230px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto; 
     }
+
 /*========= header ==========*/
+.nav-list a:hover {
+    color:var(--color-blue);
+    opacity: 1;
+    transition: opacity 250ms var(--timing-function);
+}
 header .conteiner {
     display: flex;
     align-items: center;
@@ -114,6 +117,8 @@ header .conteiner {
 }
 .contacts-head a:hover {
     color:var(--color-blue);
+    opacity: 1;
+    transition: opacity 250ms var(--timing-function);
 }
 .contacts-head {
     display: flex;
@@ -204,11 +209,16 @@ header .conteiner {
     opacity: 0;
     pointer-events: none;
 }
+.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
 .modal {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms var(--timing-function);
     width: 528px;
     height: 581px;
     background: #FFFFFF;
@@ -274,10 +284,28 @@ header .conteiner {
     padding-bottom: 47px;
 }
 .img-gagets {
-margin-top: 50px;
+    position: relative;
+    margin-top: 50px;
 }
 .img-gagets.img-gagets:not(:last-child) {
 margin-right: 30px;
+}
+.whatwedo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+}
+.what-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    line-height: 16px;
+    white-space: nowrap;
 }
 
 /*========== Наша команда ========== */
@@ -339,13 +367,17 @@ background-color: #F5F4FA;
 }
 .masanger-link:hover {
     background-color: #2196F3;
+    opacity: 1;
+    transition: opacity 250ms var(--timing-function);
 }
 .mesanger-icon {
     fill: #AFB1B8;
     margin: auto;
 }
 .mesanger-icon:hover {
-    fill: var(--color-wight)
+    fill: var(--color-wight);
+    opacity: 1;
+    transition: opacity 250ms var(--timing-function);
 }
 /*==========ПОСТОЯННЫЕ КЛИЕНТЫ==========*/
 .clients {
@@ -359,6 +391,7 @@ background-color: #F5F4FA;
 .clients-li .svg-link:hover {
     color:var(--color-blue);
     border: 1px solid var(--color-blue);
+    transition: opacity 250ms var(--timing-function);
 }
 .clients li:not(:last-child) {
     margin-right: 30px;
@@ -430,6 +463,7 @@ font-style: normal;
 }
 .masanger-link2:hover {
     background-color: #2196F3;
+    transition: opacity 250ms var(--timing-function);
 }
 b {
     color: var(--color-wight);
@@ -450,6 +484,7 @@ b {
 .buttom:hover, .buttom:focus {
     background-color: var(--color-blue);
     color: var(--color-wight);
+    transition: opacity 250ms var(--timing-function);
 }
 
 .buttom {
@@ -474,6 +509,7 @@ b {
     margin-right: 8px;
     }
 
+
 .name-progect {
     width: 322px;
     font-style: normal;
@@ -493,6 +529,7 @@ b {
 }
 
 .progect-list {
+    overflow: hidden;
     padding-top: 56px;
     padding-bottom: 94px;
     display: flex;
@@ -507,9 +544,11 @@ b {
     background: #FFFFFF;
     border: 1px solid #EEEEEE;
     box-sizing: border-box;
+
 }
 .progect-list-li:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition: opacity 250ms var(--timing-function);
 }
 
 .progect-list h3 {
@@ -529,3 +568,34 @@ b {
     margin-bottom: 20px;
     padding-left: 24px;
 }
+
+.overlay {
+    position: relative;
+    overflow: hidden;
+}
+.overlay-p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--color-wight);
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translateY(100%);
+    
+}
+.proects:hover .overlay-p {
+    transform: translateY(0);
+    transition: 250ms var(--timing-function);
+}
+.corona {
+    position: absolute;
+    height: 50%;
+    width: 322px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
