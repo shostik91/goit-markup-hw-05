@@ -417,6 +417,7 @@ footer {
     padding-top: 60px;
     padding-bottom: 60px;
 }
+
 .adres {
     color: var(--color-wight);
     font-size: 14px;
@@ -438,7 +439,6 @@ font-style: normal;
 .footer-item li {
     margin-right: 70px;
 }
-
 .footer-item2 {
     display: flex;
     justify-content: center;
@@ -586,7 +586,7 @@ b {
     transform: translateY(100%);
     
 }
-.proects:hover .overlay-p {
+.overlay:hover .overlay-p {
     transform: translateY(0);
     transition: 250ms var(--timing-function);
 }
